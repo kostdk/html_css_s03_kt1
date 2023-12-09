@@ -1,35 +1,16 @@
-function reveal() {
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
 
-    var reveals = document.querySelectorAll(".reveal");
 
-    for (var i = 0; i < reveals.length; i++) {
-
-      var windowHeight = window.innerHeight;
-
-      var elementTop = reveals[i].getBoundingClientRect().top;
-
-      var elementVisible = 150;
-
-      if (elementTop < windowHeight - elementVisible) {
-
-        reveals[i].classList.add("active");
-
-      } else {
-
-        reveals[i].classList.remove("active");
-
-      }
-
-    }
-
+function myFunction() {
+  var x = document.getElementById("Demo");
+  if (x.className.indexOf("w3-show") == -1) { 
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
   }
-
-  window.addEventListener("scroll", reveal);
-
-  console.log('test')
-
-
-  nth = document.getElementsByName('nth-child(2)')
-  
-
-  console.log(nth)
+}
